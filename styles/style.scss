@@ -60,7 +60,7 @@ nav{
   justify-content: space-between;
   align-items: center;
   margin-bottom: 90px;
-  ul{
+  .td_menu{
     display: flex;
     li{
       a{
@@ -76,6 +76,9 @@ nav{
       }
     }
   }
+}
+.hamburger-menu{
+  display: none;
 }
 .header .wrap{
   width: 100%;
@@ -315,4 +318,138 @@ nav{
 }
 
 //MONTH
+}
+@media (max-width:768px) {
+  .td_menu .menu__item{
+    display: none;
+  }
+  .active{
+    display: none;
+  }
+  .td_a{
+    display: none;
+  }
+  .hamburger-menu{
+    display: block;
+  }
+  #menu__toggle {
+    opacity: 0;
+  }
+  /* стилизуем кнопку */
+  .menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 3%;
+    right: 15%;
+    width: 36px;
+    height: 46px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  /* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -11px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 11px;
+  }
+  .menu__item{
+    display: block;
+    margin-bottom: 10px;
+    color: black;
+    &:hover{
+      padding-bottom: 3px;
+          border-bottom: 2px solid $blue;
+    }
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 70px;
+    right: 0;
+    background: #E7E7E7;
+    width: 40%;
+    padding: 10px;
+    border-radius: 0 0 0 10px;
+.btn{
+  color:white;
+  margin-bottom: 5px;
+  text-align: center;
+  &:hover{
+    padding-bottom: 10px;
+    border-bottom: 0;
+  }
+}
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn  span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+  }
+  .menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+.header{
+  img{
+    margin-left: -30px;
+    width: 200px;
+  }
+}
+.header .wrap{
+background: transparent;
+height: 400px;
+.container{
+  width: 100%;
+  a{
+    font-size: 20px;
+  }
+  button{
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+}
+}
+.logotypes{
+  display: none;
+}
+.sub_index {
+  .wrap{
+    background: transparent;
+  }
+  .container{
+  width: 100%;
+}
+
+}
 }

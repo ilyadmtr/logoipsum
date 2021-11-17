@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 .month .up_sec h2, .month .block h2 {
   font-size: 40px;
@@ -74,22 +75,26 @@ nav {
   margin-bottom: 90px;
 }
 
-nav ul {
+nav .td_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav ul li a {
+nav .td_menu li a {
   color: #696871;
   font-size: 15px;
   margin-right: 50px;
 }
 
-nav ul li a:hover {
+nav .td_menu li a:hover {
   color: black;
   padding-bottom: 3px;
   border-bottom: 2px solid #5454D4;
+}
+
+.hamburger-menu {
+  display: none;
 }
 
 .header .wrap {
@@ -363,6 +368,148 @@ nav ul li a:hover {
   }
   .month .block a {
     padding: 15px 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .td_menu .menu__item {
+    display: none;
+  }
+  .active {
+    display: none;
+  }
+  .td_a {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  #menu__toggle {
+    opacity: 0;
+  }
+  /* стилизуем кнопку */
+  .menu__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* используем flex для центрирования содержимого */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 3%;
+    right: 15%;
+    width: 36px;
+    height: 46px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  /* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -11px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 11px;
+  }
+  .menu__item {
+    display: block;
+    margin-bottom: 10px;
+    color: black;
+  }
+  .menu__item:hover {
+    padding-bottom: 3px;
+    border-bottom: 2px solid #5454D4;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 70px;
+    right: 0;
+    background: #E7E7E7;
+    width: 40%;
+    padding: 10px;
+    border-radius: 0 0 0 10px;
+  }
+  .menu__box .btn {
+    color: white;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .menu__box .btn:hover {
+    padding-bottom: 10px;
+    border-bottom: 0;
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn span::before {
+    top: 0;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    -webkit-transition-duration: .25s;
+            transition-duration: .25s;
+  }
+  .menu__box {
+    -webkit-transition-duration: .25s;
+            transition-duration: .25s;
+  }
+  .menu__item {
+    -webkit-transition-duration: .25s;
+            transition-duration: .25s;
+  }
+  .header img {
+    margin-left: -30px;
+    width: 200px;
+  }
+  .header .wrap {
+    background: transparent;
+    height: 400px;
+  }
+  .header .wrap .container {
+    width: 100%;
+  }
+  .header .wrap .container a {
+    font-size: 20px;
+  }
+  .header .wrap .container button {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+  }
+  .logotypes {
+    display: none;
+  }
+  .sub_index .wrap {
+    background: transparent;
+  }
+  .sub_index .container {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
