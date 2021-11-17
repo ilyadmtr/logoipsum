@@ -475,14 +475,6 @@ nav .td_menu li a:hover {
     -webkit-transition-duration: .25s;
             transition-duration: .25s;
   }
-  .menu__box {
-    -webkit-transition-duration: .25s;
-            transition-duration: .25s;
-  }
-  .menu__item {
-    -webkit-transition-duration: .25s;
-            transition-duration: .25s;
-  }
   .header img {
     margin-left: -30px;
     width: 200px;
