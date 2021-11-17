@@ -2,7 +2,7 @@
 @import "mixins.scss";
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 %fs_h2{
-  font-size: 50px;
+  font-size: 40px;
 }
 %wrap_disp{
   width: 100%;
@@ -19,7 +19,7 @@
 }
 
 section{
-  width: 1110px;
+  width: 90%;
   margin: auto;
   margin-top: 20px;
 }
@@ -45,6 +45,10 @@ p{
 a{
   color: $blue;
   font-weight: 900;
+}
+.active{
+  color: black;
+  border-bottom: 2px solid $blue;
 }
 
 
@@ -203,11 +207,13 @@ justify-content: space-around;
 .block{
   transition: 0.5s;
   text-align: center;
-  padding: 40px 30px 30px;
-  width: 270px;
-  height: 370px;
+  width: 30%;
+  margin: 1%;
   background: $gray;
   border-radius: 15px;
+  .block_wrap{
+    margin: 10%;
+  }
   h3{
     font-size: 18px;
     color: $text_gray;
@@ -215,7 +221,7 @@ justify-content: space-around;
   }
   h2{
     @extend %fs_h2;
-margin-bottom: 50px;
+margin-bottom: 45px;
   }
   ul{
     margin-bottom: 10px;
@@ -225,7 +231,7 @@ margin-bottom: 50px;
     color:$text_gray;
   }
   a{
-    padding: 20px 95px;
+    padding: 15px 30%;
     background: white;
     color:$blue;
     border-radius: 15px;
@@ -249,3 +255,64 @@ li{
 //MONTH
 
 
+
+//ADAPTIVE LAYOUT
+@media (max-width:1024px){
+// HEADER
+.btn{
+  padding: 10px 20px;
+  font-size: 13px;
+}
+nav{
+    justify-content: space-around;
+    margin-bottom: 20px;
+    img{
+      width: 170px;
+      margin-right: 30px;
+    }
+}
+.header .wrap{
+    background-size: 63%;
+    // height: 600px;
+    .container{
+      width: 300px;
+  h2{
+    font-size: 50px;
+  }
+  p{
+    font-size: 15px;
+  }
+      button{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        margin-left: 20px;
+      }
+}
+}
+  // HEADER
+  // SUBSCRIPTION INDEX
+  .sub_index .container{
+    width: 300px;
+  }
+  // SUBSCRIPTION INDEX
+  // METRICS
+.metrics .container{
+  width: 300px;
+}
+// METRICS
+//MONTH
+
+.month .block{
+
+  h2{
+    font-size: 30px;
+  }
+  a{
+    padding: 15px 25%;
+  }
+
+}
+
+//MONTH
+}
