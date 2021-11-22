@@ -54,7 +54,6 @@ a{
 
 
 // HEADER
-
 nav{
   display: flex;
   justify-content: space-between;
@@ -62,6 +61,7 @@ nav{
   margin-bottom: 90px;
   .menu{
     display: flex;
+    align-items: center;
     li{
       a{
         color: #696871;
@@ -381,7 +381,7 @@ nav{
 
     flex-flow: column wrap;
    align-content: flex-start;
-   align-items: flex-start;
+   align-items: flex-end;
    li{
 margin-bottom: 20px;
      .menu__item{
@@ -458,5 +458,9 @@ margin-bottom: 20px;
   .block{
     width: 100%;
   }
+}
+nav .menu{
+  display: flex;
+  align-items: flex-start;
 }
 }
