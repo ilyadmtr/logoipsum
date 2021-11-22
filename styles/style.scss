@@ -320,6 +320,9 @@ nav{
 //MONTH
 }
 @media (max-width:767px) {
+  .header img{
+    width: 220px;
+  }
   .burger{
     position: absolute;
     right: 20px;
@@ -397,4 +400,13 @@ nav{
 .logotypes{
   display: none;
 }
+.header{
+  .wrap{
+    background: transparent;
+  }
+  h2{
+    font-size: 55px;
+  }
+}
+
 }

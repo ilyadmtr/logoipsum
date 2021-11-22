@@ -371,6 +371,9 @@ nav .menu li a:hover {
 }
 
 @media (max-width: 767px) {
+  .header img {
+    width: 220px;
+  }
   .burger {
     position: absolute;
     right: 20px;
@@ -462,6 +465,12 @@ nav .menu li a:hover {
   }
   .logotypes {
     display: none;
+  }
+  .header .wrap {
+    background: transparent;
+  }
+  .header h2 {
+    font-size: 55px;
   }
 }
 /*# sourceMappingURL=style.css.map */
