@@ -60,7 +60,7 @@ nav{
   justify-content: space-between;
   align-items: center;
   margin-bottom: 90px;
-  .td_menu{
+  .menu{
     display: flex;
     li{
       a{
@@ -319,131 +319,64 @@ nav{
 
 //MONTH
 }
-@media (max-width:768px) {
-  .td_menu .menu__item{
-    display: none;
-  }
-  .active{
-    display: none;
-  }
-  .td_a{
-    display: none;
-  }
-  .hamburger-menu{
-    display: block;
-  }
-  #menu__toggle {
-    opacity: 0;
-  }
-  /* стилизуем кнопку */
-  .menu__btn {
-    display: flex; /* используем flex для центрирования содержимого */
-    align-items: center;  /* центрируем содержимое кнопки */
-    position: fixed;
-    top: 3%;
-    right: 15%;
-    width: 36px;
-    height: 46px;
-    cursor: pointer;
-    z-index: 1;
-  }
-  /* добавляем "гамбургер" */
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
+@media (max-width:767px) {
+  .burger{
     position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .burger span, .burger span:before, .burger span:after{
     width: 100%;
-    height: 2px;
-    background-color: #616161;
-  }
-  .menu__btn > span::before {
-    content: '';
-    top: -11px;
-  }
-  .menu__btn > span::after {
-    content: '';
-    top: 11px;
-  }
-  .menu__item{
+    position: absolute;
+    height: 10px;
+    background: #333;
     display: block;
-    margin-bottom: 10px;
-    color: black;
-    &:hover{
-      padding-bottom: 3px;
-          border-bottom: 2px solid $blue;
-    }
+    transition: .3s;
+    border-radius: 5px;
   }
-  .menu__box {
-    display: block;
-    position: fixed;
-    visibility: hidden;
-    top: 70px;
-    right: 0;
-    background: #E7E7E7;
-    width: 40%;
-    padding: 10px;
-    border-radius: 0 0 0 10px;
-.btn{
-  color:white;
-  margin-bottom: 5px;
-  text-align: center;
-  &:hover{
-    padding-bottom: 10px;
-    border-bottom: 0;
+  .burger span:before{
+    content: "";
+    top: -20px;
+    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-}
+  .burger span{
+    top: 20px;
   }
-  #menu__toggle:checked ~ .menu__btn > span {
+  .burger span:after{
+    content: "";
+    bottom: -20px;
+    transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .burger span.active:before{
+    content: "";
+    top: 0px;
     transform: rotate(45deg);
+    transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
-  #menu__toggle:checked ~ .menu__btn  span::before {
-    top: 0;
-    transform: rotate(0);
+  .burger span.active:after{
+    content: "";
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
-  #menu__toggle:checked ~ .menu__btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
+  .burger span.active{
+    background: rgba(255, 255, 255, 0);
   }
-  #menu__toggle:checked ~ .menu__box {
-    visibility: visible;
+  .menu{
+    width: 60%;
+    height: 100vh;
+    background: #333;
+    color: #ccc;
+    padding: 10px;
+    position: fixed;
+    left: -95%;
+    transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
-  .menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-  transition-duration: .25s;
-}
-.header{
-  img{
-    margin-left: -30px;
-    width: 200px;
+  .menu.animate{
+    left: 0%;
   }
-}
-.header .wrap{
-background: transparent;
-height: 400px;
-.container{
-  width: 100%;
-  a{
-    font-size: 20px;
-  }
-  button{
-    width: 60px;
-    height: 60px;
-    font-size: 30px;
-  }
-}
-}
-.logotypes{
-  display: none;
-}
-.sub_index {
-  .wrap{
-    background: transparent;
-  }
-  .container{
-  width: 100%;
-}
 
-}
 }
