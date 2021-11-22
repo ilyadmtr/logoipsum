@@ -405,23 +405,39 @@ margin-bottom: 20px;
 }
 .header{
   .wrap{
+    justify-content: center;
     background: transparent;
+    height: auto;
+    .container{
+      width: 100%;
+
+    }
   }
 }
 
 .sub_index{
+  .container{
+    width: 100%;
+  }
   .wrap{
-    margin: 0 auto;
+    justify-content: center;
     background: transparent;
+    height: auto;
   }
 }
 .metrics{
+  .container{
+    width: 100%;
+  }
   .wrap{
+    justify-content: center;
   background: transparent;
+  height: auto;
 }
 }
 .benchmarks{
   flex-wrap: wrap;
+  height: auto;
   .block{
     width: 100%;
 
@@ -430,16 +446,17 @@ margin-bottom: 20px;
 .up_sec{
   flex-wrap: wrap;
   .unif_a{
-    width: 90%;
+    width: 100%;
+    justify-content: center;
     a{
-      padding: 22px 35px;
+      padding: 22px 17%;
     }
   }
 }
 .month .wrap{
   flex-wrap: wrap;
   .block{
-    width: 92%;
+    width: 100%;
   }
 }
 }

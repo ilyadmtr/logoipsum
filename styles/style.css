@@ -476,18 +476,39 @@ nav .menu li a:hover {
     display: none;
   }
   .header .wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background: transparent;
+    height: auto;
+  }
+  .header .wrap .container {
+    width: 100%;
+  }
+  .sub_index .container {
+    width: 100%;
   }
   .sub_index .wrap {
-    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background: transparent;
+    height: auto;
+  }
+  .metrics .container {
+    width: 100%;
   }
   .metrics .wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background: transparent;
+    height: auto;
   }
   .benchmarks {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    height: auto;
   }
   .benchmarks .block {
     width: 100%;
@@ -497,17 +518,20 @@ nav .menu li a:hover {
         flex-wrap: wrap;
   }
   .up_sec .unif_a {
-    width: 90%;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .up_sec .unif_a a {
-    padding: 22px 35px;
+    padding: 22px 17%;
   }
   .month .wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
   .month .wrap .block {
-    width: 92%;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
