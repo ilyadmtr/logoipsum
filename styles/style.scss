@@ -407,9 +407,39 @@ margin-bottom: 20px;
   .wrap{
     background: transparent;
   }
-  h2{
-    font-size: 55px;
-  }
 }
 
+.sub_index{
+  .wrap{
+    margin: 0 auto;
+    background: transparent;
+  }
+}
+.metrics{
+  .wrap{
+  background: transparent;
+}
+}
+.benchmarks{
+  flex-wrap: wrap;
+  .block{
+    width: 100%;
+
+  }
+}
+.up_sec{
+  flex-wrap: wrap;
+  .unif_a{
+    width: 90%;
+    a{
+      padding: 22px 35px;
+    }
+  }
+}
+.month .wrap{
+  flex-wrap: wrap;
+  .block{
+    width: 92%;
+  }
+}
 }

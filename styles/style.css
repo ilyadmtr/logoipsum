@@ -478,8 +478,36 @@ nav .menu li a:hover {
   .header .wrap {
     background: transparent;
   }
-  .header h2 {
-    font-size: 55px;
+  .sub_index .wrap {
+    margin: 0 auto;
+    background: transparent;
+  }
+  .metrics .wrap {
+    background: transparent;
+  }
+  .benchmarks {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .benchmarks .block {
+    width: 100%;
+  }
+  .up_sec {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .up_sec .unif_a {
+    width: 90%;
+  }
+  .up_sec .unif_a a {
+    padding: 22px 35px;
+  }
+  .month .wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .month .wrap .block {
+    width: 92%;
   }
 }
 /*# sourceMappingURL=style.css.map */
